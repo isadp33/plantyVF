@@ -13,7 +13,8 @@ function theme_enqueue_style()
 
 function add_admin_link($items, $args) {
     if (is_user_logged_in()) {
-        $admin_link = '<a href="' . admin_url() . '" class="admin-link">Admin</a>';
+        $admin_link = '<li class="menu-rencontrer menu-item menu-item-type-post_type menu-item-object-page parent hfe-creative-menu"> 
+        <a href="' . admin_url() . '" class="hfe-menu-item">Admin</a></li>';
         // Trouver la première occurrence de '</li>' dans $items
         $position = strpos($items, '</li>') + strlen('</li>');
         // Insérer le lien vers l'administration juste après la première balise </li>
